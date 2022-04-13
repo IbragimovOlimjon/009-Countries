@@ -1,0 +1,333 @@
+/* CUSTOM-PROPY */
+:root {
+    --color-heading-text:#111517;
+    --color:#fff;
+    --font:"Nunito Sans", "Arial", sans-serif;
+    --global-color:#F2F2F2;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/nunito-sans-v11-latin-regular.woff2') format('woff2'),
+    url('../fonts/nunito-sans-v11-latin-regular.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+    url('../fonts/nunito-sans-v11-latin-300.woff2') format('woff2'),
+    url('../fonts/nunito-sans-v11-latin-300.woff') format('woff'); 
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: local(''),
+    url('../fonts/nunito-sans-v11-latin-600italic.woff2') format('woff2'),
+    url('../fonts/nunito-sans-v11-latin-600italic.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+    url('../fonts/nunito-sans-v11-latin-800.woff2') format('woff2'),
+    url('../fonts/nunito-sans-v11-latin-800.woff') format('woff');
+    font-display: swap;
+}
+
+/* GLOBAL-STYLE */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-heading-text);
+    font-family: var(--font);
+}
+
+*:focus {                          
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: dashed;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SITE-HEADER */
+.site-header {
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-heading {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.button-dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--color);
+}
+
+.icon-dark-mode {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.dark-mode {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    color: var(--color-heading-text);
+}
+
+.input {
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 25px;
+    color: #848484;
+    line-height: 20px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: 34px center;
+    padding: 19px 207px 19px 74px;
+    background-image: url("../img/search.svg");
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+}
+
+/* MAIN-CONTENT */
+.main-content {
+    flex-grow: 1;
+    background-color: var(--global-color);
+}
+
+.main-select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    padding-top: 48px;
+}
+
+.main-select {
+    border-radius: 5px;
+    padding: 18px 71px 18px 24px ;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border: none;
+}
+
+/* MAIN-SECTION */
+.main-info-wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 24px;
+} 
+
+.main-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-lists {
+    background-color: var(--color);
+    margin-right: 74px;
+    margin-bottom: 75px;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    border-radius: 5px;
+}
+
+.main-lists:nth-child(4n) {
+    margin: 0;
+    margin-bottom: 74px;
+}
+
+.main-section-img {
+    width: 264px;
+    height: 160px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.main-lists-wrapper {
+    padding: 20px 0px 46px 24px ;
+}    
+
+.main-list-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-heading-text);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+}
+
+/* POPULATION */
+.population {
+    display: flex;
+    align-items: center;
+}
+
+.population-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 5px;
+}
+
+.population-text {
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* CONTACT-HTML */
+.main-content-wrapper {
+    margin-top: 80px;
+}
+
+.back-link-wrapper {
+    margin-bottom: 80px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-heading-text);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+    border-radius: 6px;
+    padding: 10px 39px;
+    text-decoration: none;
+    background-color: var(--color);
+    max-width: 160px;
+}
+
+.back-link:hover {
+    opacity: 0.8;
+}
+
+.back-link:active {
+    opacity: 0.6;
+}
+
+.back-link-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.back-link-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* MAIN-CONTENT-INFO */
+.main-contact-info-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.main-contact-img {
+    width: 560px;
+    height: 401px;
+    object-fit: cover;
+    margin-right: 120px;
+    border-radius: 10px;
+}
+.mini-wrapper {
+    display: flex;
+    align-items: center;
+}
+.data-heading {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0;
+    margin-bottom: 23px;
+}
+
+
+.data-section-mini-heading {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    margin-right: 5px;
+}
+
+.data-section {
+    margin: 0;
+    margin-right: 141px;
+    width: 250px;
+}
+
+.data-section-mini-text {
+    margin: 0;
+    font-weight: 300;
+}
